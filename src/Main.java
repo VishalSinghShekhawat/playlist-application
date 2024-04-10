@@ -51,6 +51,8 @@ public class Main {
         album1.addSong("Hare Ram Hare Krishna",4.5);
         System.out.println(album1.addAlbumToPlaylist("Hare Ram Hare Krishna",favourites));
         System.out.println(album1.addAlbumToPlaylist("deva deva",favourites));
+        album1.addSong("Mere ghar ram aaye hai",2.15);
+        album1.addAlbumToPlaylist(5,favourites);
 
         System.out.println(favourites);
 
