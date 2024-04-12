@@ -52,8 +52,8 @@ public class Main {
         System.out.println(album1.addAlbumToPlaylist("Hare Ram Hare Krishna",favourites));
         System.out.println(album1.addAlbumToPlaylist("deva deva",favourites));
         album1.addSong("Mere ghar ram aaye hai",2.15);
-        album1.addAlbumToPlaylist(5,favourites);
-
+        album1.addAlbumToPlaylist(6,favourites);
+        System.out.println(album1);
         System.out.println(favourites);
 
         play(favourites);
@@ -81,28 +81,21 @@ public class Main {
                     printmenu();
                     break;
                 case 2:
+                    if(temp){
+                        player.next();
+                    }
                     if(player.hasNext()){
                         //System.out.println(temp);
-                        if(!temp){
-                            System.out.println(player.next());
-                        }else{
-                            //player.next();
-                            //System.out.println("Temp is true");
-                            if(player.hasNext()) System.out.println(player.next());
-                            else System.out.println("No more songs");
-                          // player.previous();
-                        }
-                        temp = false;
+                        System.out.println(player.next());
                         }else System.out.println("No more songs");
+                    temp = false;
                     break;
                 case 3:
-
-                    if(player.hasPrevious()){
-                        //System.out.println(temp);
+                    if(!temp){
                         player.previous();
-                        if(player.hasPrevious())System.out.println(player.previous());
-                        else System.out.println("It is the first song dude");
-                        player.next();
+                    }
+                    if(player.hasPrevious()){
+                        System.out.println(player.previous());
                     }else
                         System.out.println("It is the first song dude");
 
