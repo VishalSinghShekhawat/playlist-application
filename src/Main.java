@@ -103,12 +103,12 @@ public class Main {
                     break;
                 case 4:
                     if(temp){
-                        player.next();
-                        System.out.println(player.previous());
-                    }else{
-                        player.previous();
+
                         System.out.println(player.next());
-                        //temp = true;
+                        temp = false;
+                    }else{
+                        System.out.println(player.previous());
+                        temp = true;
                     }
 //                    player.next();
                     break;
